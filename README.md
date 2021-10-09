@@ -5,7 +5,7 @@ Project Learning Jetpack Compose on Desktop Aplication
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.0 Development
+    $version_release = 1.0.1 Development
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me

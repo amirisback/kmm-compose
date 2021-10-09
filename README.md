@@ -1,22 +1,11 @@
-## Desktop Compose RxJava Retrofit
+## Jetpack Compose KMM UI Experimental
 Project Learning Jetpack Compose on Desktop Aplication
-- Request Data Retrofit
-- Simple Example RxJava Jetpack Compose Desktop Apps
+- UI Library Experimental 
 
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.0
-
-## Screen Shoot
-
-### App
-
-![ScreenShoot](docs/image/ss_1.png?raw=true)
-
-### Console
-
-![ScreenShoot](docs/image/ss_2.png?raw=true)
+    $version_release = 1.0.0 Development
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me

@@ -45,12 +45,12 @@ allprojects {
 
 ### For build.gradle (Groovy)
     dependencies {
-        implementation 'com.github.amirisback:jetpack-compose-kmm-ui-experimental:1.0.1'
+        implementation 'com.github.amirisback:kmm-compose:1.0.1'
     }
 
 ### For build.gradle.kts (Kotlin DSL)
     dependencies {
-        implementation("com.github.amirisback:jetpack-compose-kmm-ui-experimental:1.0.1")
+        implementation("com.github.amirisback:kmm-compose:1.0.1")
     }
 
 

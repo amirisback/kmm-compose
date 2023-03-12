@@ -1,11 +1,10 @@
-import org.jetbrains.compose.compose
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.5.21"
-    id("org.jetbrains.compose") version "1.0.0-alpha3"
+    kotlin("jvm")
+    id("org.jetbrains.compose")
     `maven-publish`
 }
 
@@ -38,7 +37,7 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    maven { url = uri("https://jitpack.io") }
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -51,8 +50,8 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "11"
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
 }
 
 compose.desktop {
@@ -60,7 +59,7 @@ compose.desktop {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "jetpack-compose-kmm-ui-experimental"
+            packageName = "kmm-compose"
             packageVersion = "1.0.0"
         }
     }
@@ -81,13 +80,9 @@ publishing {
         register("release", MavenPublication::class) {
 
             from(components["java"])
-
             groupId = myArtifactGroup
-
             artifactId = myArtifactId
-
             version = myArtifactVersion
-
             artifact(sourcesJar)
 
             pom {
@@ -100,7 +95,7 @@ publishing {
     }
 
     repositories {
-        maven { url = uri("https://jitpack.io") }
+        maven("https://jitpack.io")
     }
 
 }
